@@ -7,10 +7,12 @@ import PrivateRoute from "./components/PrivateRoute.jsx";
 import AuthContext from "./contexts/AuthContext";
 import CustomersPage from "./pages/CustomersPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
-import InvoicesPage from "./pages/InvoicesPage.js";
+import InvoicesPage from "./pages/InvoicesPage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import AuthApi from "./services/authAPI";
 import CustomerPage from "./pages/CustomerPage.jsx";
+import InvoicePage from "./pages/InvoicePage.jsx";
+import RegisterPage from "./pages/RegisterPage.js";
 
 /*
  * Welcome to your app's main JavaScript file!
@@ -44,6 +46,8 @@ const App = () => {
         <main className="container mt-5">
           <Switch>
             <Route path="/login" component={LoginPage} />
+            <Route path="/register" component={RegisterPage} />
+            <PrivateRoute path="/invoices/:id" component={InvoicePage} />
             <PrivateRoute path="/invoices" component={InvoicesPage} />
             <PrivateRoute path="/customers/:id" component={CustomerPage} />
             <PrivateRoute path="/customers" component={CustomersPage} />
