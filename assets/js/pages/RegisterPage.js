@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Field from "../components/forms/Field";
 import usersApi from "../services/usersApi";
+import { toast } from "react-toastify";
 
 const RegisterPage = ({ history }) => {
   const [user, setUser] = useState({
@@ -33,6 +34,7 @@ const RegisterPage = ({ history }) => {
     const apiErrors = {};
     if (user.password !== user.passwordConfirm) {
       apiErrors.passwordConfirm = "Les mots de passe doivent être identiques";
+      toast.error("Veuillez vérifier les champs du formulaire 😦");
       setErrors(apiErrors);
       return;
     }
@@ -40,8 +42,9 @@ const RegisterPage = ({ history }) => {
     try {
       await usersApi.register(user);
       setErrors({});
-
-      // TODO: flash succès
+      toast.success(
+        "Vous êtes désormais inscrit, vous pouvez vous connecter! 😉"
+      );
       history.replace("/login");
     } catch (error) {
       const { violations } = error.response.data;
@@ -50,7 +53,7 @@ const RegisterPage = ({ history }) => {
         violations.forEach(violation => {
           apiErrors[violation.propertyPath] = violation.message;
         });
-        // TODO : Flash erreur
+        toast.error("Veuillez vérifier les champs du formulaire.");
         setErrors(apiErrors);
       }
     }

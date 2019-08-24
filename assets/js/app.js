@@ -13,6 +13,8 @@ import AuthApi from "./services/authAPI";
 import CustomerPage from "./pages/CustomerPage.jsx";
 import InvoicePage from "./pages/InvoicePage.jsx";
 import RegisterPage from "./pages/RegisterPage.js";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 /*
  * Welcome to your app's main JavaScript file!
@@ -55,6 +57,7 @@ const App = () => {
           </Switch>
         </main>
       </HashRouter>
+      <ToastContainer position={toast.POSITION.BOTTOM_RIGHT} />
     </AuthContext.Provider>
   );
 };
