@@ -1,4 +1,4 @@
-# CMR - Gestion de clients en React et Symfony
+# CRM - Gestion de clients en React et Symfony
 
 Projet de gestion de clients/factures. Gestion via l'api-platform et interface indépendante en React.
 
