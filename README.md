@@ -4,6 +4,8 @@ Projet de gestion de clients/factures. Gestion via l'api-platform et interface i
 
 ## Installation
 
+Composer et npm sont requis pour l'installation de ce projet.
+
 ```bash
 composer install
 npm install
@@ -19,7 +21,8 @@ php bin/console doctrine:fixtures:load --no-interaction
 ```
 
 Rendez-vous sur votre base de données pour récupérer l'email d'un utilisateur aléatoire générée.
-Le mot de passe sera : test
+
+Le mot de passe sera : **test**
 
 Sinon vous pouvez vous inscrire via le formulaire d'inscription.
 
