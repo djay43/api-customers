@@ -28,7 +28,6 @@ const CustomersPage = props => {
   }, []);
 
   // Manager for deleting a customer
-
   const handleDelete = async id => {
     const originalCustomers = [...customers];
     setCustomers(customers.filter(customer => customer.id !== id));

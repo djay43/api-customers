@@ -31,7 +31,7 @@ const InvoicesPage = props => {
       setInvoices(data);
       setLoading(false);
     } catch (error) {
-      toast.error("Une erreur est survenue lord du chargement des factures 😦");
+      toast.error("Une erreur est survenue lors du chargement des factures 😦");
     }
   };
 

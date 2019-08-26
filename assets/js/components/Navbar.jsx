@@ -16,7 +16,7 @@ const Navbar = ({ history }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <NavLink className="navbar-brand" to="/">
-        Api Freelance
+        CMR Freelance
       </NavLink>
       <button
         className="navbar-toggler"
