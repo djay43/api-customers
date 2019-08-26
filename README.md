@@ -10,17 +10,20 @@ Composer et npm sont requis pour l'installation de ce projet.
 composer install
 npm install
 npm run build
+php bin/console server:run
 ```
+
+L'url en local doit être au format **http://localhost:8000**, vous pouvez cependant la modifier dans le fichier .env à la racine du site
 
 ## Usage
 
-Pour un utilisateur test lancez les fixtures:
+Pour une génération de données aléatoires lancez les fixtures:
 
 ```bash
 php bin/console doctrine:fixtures:load --no-interaction
 ```
 
-Rendez-vous sur votre base de données pour récupérer l'email d'un utilisateur aléatoire générée.
+Rendez-vous sur votre base de données pour récupérer l'email d'un utilisateur aléatoire généré.
 
 Le mot de passe sera : **test**
 
